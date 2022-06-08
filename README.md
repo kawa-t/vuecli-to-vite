@@ -1,4 +1,4 @@
-# VueCli のプロ を Vite に切り替える
+# VueCli のプロジェクト を Vite に切り替える
 
 - Vue.extend
 - vue-property-decorator
