@@ -5,7 +5,7 @@
 
 - Vuetify
 
-バンドル
+バンドルツール
 
 - webpack
 
