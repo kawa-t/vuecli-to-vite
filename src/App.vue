@@ -1,8 +1,14 @@
 <template>
-  <div id="app" class="app__wrapper">
-    <CountNumber />
-    <CountNumberExtend />
-  </div>
+  <v-app id="app" class="app__wrapper">
+    <v-content>
+      <v-main>
+        <v-layout width="90%">
+          <v-flex><CountNumber /></v-flex>
+          <v-flex><CountNumberExtend /></v-flex>
+        </v-layout>
+      </v-main>
+    </v-content>
+  </v-app>
 </template>
 
 <script lang="ts">

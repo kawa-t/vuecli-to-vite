@@ -2,10 +2,12 @@ module.exports = {
   module: {
     test: /\.(js)$/,
     exclude: /node_modules/,
-    // loader: 'eslint-loader',
+    // loader: "sass-loader",
     use: [
+      "vue-style-loader",
+      "css-loader",
       {
-        loader: "eslint-loader",
+        loader: "sass-loader",
         query: {
           name: "bundle.js",
         },

@@ -1,7 +1,7 @@
 <template>
   <div>
     <h3>クラスコンポーネントで記述</h3>
-    <button @click="pushClassComponent">Click Button</button>
+    <v-btn @click="pushClassComponent" elevation="1">Click Button</v-btn>
   </div>
 </template>
 <script lang="ts">
