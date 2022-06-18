@@ -2,7 +2,7 @@
   <v-app id="app" class="app__wrapper">
     <v-content>
       <v-main>
-        <v-layout>
+        <v-layout width="90%">
           <v-flex><CountNumber /></v-flex>
           <v-flex><CountNumberExtend /></v-flex>
         </v-layout>
