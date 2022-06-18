@@ -2,6 +2,11 @@
   <div class="count__wrapper">
     <AddExButton @push_extend="countupExtend"></AddExButton>
     <PlayGoundEx :count_extend="count_extend"></PlayGoundEx>
+    <v-progress-circular
+      v-if="initLoading"
+      indeterminate
+      color="yellow"
+    ></v-progress-circular>
   </div>
 </template>
 <script lang="ts">
@@ -10,6 +15,7 @@ import AddExButton from "./Atoms/AddButtonExtend.vue";
 import PlayGoundEx from "./Atoms/PlayGoundExtend.vue";
 export type DataType = {
   count_extend: number;
+  initLoading: boolean;
 };
 export default Vue.extend({
   name: "CountNumberExtend",
@@ -20,6 +26,7 @@ export default Vue.extend({
   data(): DataType {
     return {
       count_extend: 0,
+      initLoading: true,
     };
   },
   methods: {
@@ -34,6 +41,11 @@ export default Vue.extend({
         this.count_extend = 0;
       }
     },
+  },
+  mounted(): void {
+    setTimeout(() => {
+      this.initLoading = false;
+    }, 2000);
   },
 });
 </script>

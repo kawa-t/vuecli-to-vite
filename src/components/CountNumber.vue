@@ -2,6 +2,11 @@
   <div class="count__wrapper">
     <AddButton @pushClassComponent="countUp"></AddButton>
     <PlayGound :countProp="countProp"></PlayGound>
+    <v-progress-circular
+      v-if="initLoading"
+      indeterminate
+      color="purple"
+    ></v-progress-circular>
   </div>
 </template>
 <script lang="ts">
@@ -17,6 +22,7 @@ import PlayGound from "./Atoms/PlayGound.vue";
 })
 export default class CountNumer extends Vue {
   countProp: number = 0;
+  initLoading: boolean = true;
   countUp(): void {
     this.countProp++;
   }
@@ -26,6 +32,11 @@ export default class CountNumer extends Vue {
       alert("リセットします！");
       this.countProp = 0;
     }
+  }
+  mounted(): void {
+    setTimeout(() => {
+      this.initLoading = false;
+    }, 2000);
   }
 }
 </script>
