@@ -1,13 +1,16 @@
 <template>
   <v-app id="app" class="app__wrapper">
-    <v-content>
-      <v-main>
-        <v-layout width="90%">
-          <v-flex><CountNumber /></v-flex>
-          <v-flex><CountNumberExtend /></v-flex>
-        </v-layout>
-      </v-main>
-    </v-content>
+    <v-main>
+      <v-toolbar color="red lighten-3" dark>
+        <v-toolbar-title>VueCLIからViteへ</v-toolbar-title>
+        <v-spacer></v-spacer>
+        <span>package.jsonのバージョン:{{ packageVersion }}</span>
+      </v-toolbar>
+      <v-layout width="90%">
+        <v-flex><CountNumber /></v-flex>
+        <v-flex><CountNumberExtend /></v-flex>
+      </v-layout>
+    </v-main>
   </v-app>
 </template>
 
@@ -21,7 +24,9 @@ import CountNumberExtend from "./components/CountNumberExtend.vue";
     CountNumberExtend,
   },
 })
-export default class App extends Vue {}
+export default class App extends Vue {
+  packageVersion: string = import.meta.env.VITE_APP_VERSION || "";
+}
 </script>
 
 <style>
@@ -31,7 +36,6 @@ export default class App extends Vue {}
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 .app__wrapper {
   display: flex;

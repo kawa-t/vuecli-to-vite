@@ -8,7 +8,7 @@
       rel="icon"
       href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text x=%2250%%22 y=%2250%%22 style=%22dominant-baseline:central;text-anchor:middle;font-size:90px;%22>📎</text></svg>"
     />
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <!-- <title><%= htmlWebpackPlugin.options.title %></title> -->
   </head>
   <body>
     <noscript>
@@ -19,6 +19,8 @@
       >
     </noscript>
     <div id="app"></div>
+    <!-- 下記一文を追加してmain.tsを読み込ませる -->
+    <script type="module" src="/src/main.ts"></script>
     <!-- built files will be auto injected -->
   </body>
 </html>

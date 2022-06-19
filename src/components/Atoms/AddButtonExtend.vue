@@ -1,7 +1,7 @@
 <template>
   <div>
     <h3>Vue.extendで記述</h3>
-    <v-btn @click="pushExtend" elevation="1">Click Button(Extend.ver)</v-btn>
+    <v-btn @click="pushExtend" elevation="1">クリックボタン(Extend.ver)</v-btn>
   </div>
 </template>
 <script lang="ts">

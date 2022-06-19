@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "esnext",
     "module": "esnext",
     "strict": true,
     "jsx": "preserve",
@@ -13,7 +13,7 @@
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "baseUrl": ".",
-    "types": ["webpack-env", "vuetify"],
+    "types": ["vite/client", "webpack-env", "vuetify"],
     "paths": {
       "@/*": ["src/*"]
     },
